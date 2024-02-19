@@ -5,8 +5,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TaskEase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
   <body>
-    <h1>"TaskEase: Simple Todo List"</h1>
+    <!-- header -->
+    <header class="header-section">
+      <!-- navbar -->
+      <nav class="navbar">
+        <h2 class="logo">Tasksease</h2>
+        <ul class="menu-list">
+          <li class="menu"><a href="#">help</a></li>
+          <li class="menu"><a href="#">share</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- heading section -->
+    <div class="heading-section">
+      <div class="main-heading-div">
+        <h1 class="slogan"><span>Hey!</span> you are free today</h1>
+        <p class="sub-heading">
+          There are <span class="task-count">4</span> on your plate for today.
+        </p>
+        <p class="current-day">23 - March - 2024</p>
+      </div>
+      <button class="task-btn btn">New task</button>
+    </div>
+    <!-- add task section -->
+    <div class="add-task-section">
+      <div class="inputs">
+        <input type="text" class="title" placeholder="Enter task title" />
+        <textarea
+          cols="20"
+          rows="6"
+          class="description"
+          placeholder="Enter task description"
+        ></textarea>
+      </div>
+      <button class="submit btn">submit</button>
+    </div>
+    <!-- task lists -->
+    <div class="task-list-section">
+      <ul class="taks-list">
+        <li class="task-item">
+          <h3 class="task-title">Learn JS</h3>
+          <p class="task-description">Learn more about js.</p>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>

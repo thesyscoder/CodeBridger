@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+}
+:root {
+  --primary-color: #4234db; /* Blue */
+  --secondary-color: #f37f12; /* Orange */
+}
+
+/* global style */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+/* navbar design */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.logo {
+  font-weight: 300;
+  color: var(--primary-color);
+}
+.menu-list {
+  display: flex;
+  cursor: pointer;
+}
+.menu:not(:first-child) {
+  margin-left: 1rem;
+}
+
+/* heading section */
+.heading-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rem 0;
+}
+.slogan {
+  font-weight: 400;
+}
+
+.slogan > span {
+  color: var(--primary-color);
+}
+p {
+  color: gray;
+  opacity: 0.8;
+}
+/* btn style */
+.btn {
+  background-color: var(--secondary-color);
+  outline: none;
+  padding: 0.6rem 2rem;
+  border-radius: 0.6rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+/* add task section design */
+.add-task-section {
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  width: 20em;
+  padding: 0.6rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.description {
+  border: 2px solid var(--secondary-color);
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+/* display list section */
+.task-list-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}

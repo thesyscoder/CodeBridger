@@ -20,7 +20,16 @@ a {
 ul {
   list-style: none;
 }
+
 /* navbar design */
+.header-section {
+  background-image: linear-gradient(
+    -225deg,
+    #dfffcd 0%,
+    #90f9c4 48%,
+    #39f3bb 100%
+  );
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -42,7 +51,7 @@ ul {
 /* heading section */
 .heading-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   padding: 4rem 0;
 }
@@ -97,7 +106,28 @@ p {
 /* display list section */
 .task-list-section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.task-list-section > ul {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 600px;
+  padding: 3rem;
+  border-radius: 0.6rem;
+}
+.task-list-section > ul > li {
+  border: 1px solid var(--primary-color);
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  background-color: rgb(243, 243, 243);
+}
+.task-list-section > ul > li > h3 {
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+.task-list-section > ul > li > p {
+  font-weight: 300;
 }

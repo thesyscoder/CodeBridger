@@ -1,66 +1,69 @@
-/**
- * @fileOverview This file contains the JavaScript code for TaskEase: Simple Todo List.
- * @author thesyscoder
- * @version 1.0
- */
+// Cache DOM elements
+const newTaskBtn = document.querySelector(".task-btn");
+const submitBtn = document.querySelector(".submit");
+const titleInput = document.querySelector(".title");
+const descriptionInput = document.querySelector(".description");
+const addTaskSection = document.querySelector(".add-task-section");
+const taskListSection = document.querySelector(".task-list-section");
+const taskList = document.querySelector(".task-list");
+const statusPara = document.querySelector(".task-status");
 
-/**
- * Represents the TaskEase application for managing todo list tasks.
- * @namespace TaskEase
- */
-
-// Get the elements using class
-
-const new_task_btn = document.getElementsByClassName("task-btn")[0];
-const submit_btn = document.getElementsByClassName("submit")[0];
-const title_input = document.getElementsByClassName("title")[0];
-const description_input = document.getElementsByClassName("description")[0];
-const add_task_section = document.getElementsByClassName("add-task-section")[0];
-const task_list_section =
-  document.getElementsByClassName("task-list-section")[0];
-const task_list = document.getElementsByClassName("task-list")[0];
-
-// Variable to track visibility state
-let isVisible = false;
-var listItem = document.createElement("li");
-listItem.classList.add("task-item");
-
-new_task_btn.addEventListener("click", () => {
-  if (isVisible) {
-    add_task_section.style.display = "none";
-    task_list_section.style.display = "flex";
-  } else {
-    add_task_section.style.display = "flex";
-    task_list_section.style.display = "none";
-  }
+// Add event listener to toggle visibility
+newTaskBtn.addEventListener("click", () => {
+  addTaskSection.style.display = isVisible ? "none" : "flex";
+  taskListSection.style.display = isVisible ? "flex" : "none";
   isVisible = !isVisible;
 });
 
-// add event listener to add  new task
-submit_btn.addEventListener("click", () => {
-  // get input value
-  const title = title_input.value.trim();
-  const description = description_input.value.trim();
+// Variable to track visibility state
+let isVisible = false;
 
-  if (title === "" && description === "") alert("please provide data");
+// Add event listener to add new task
+submitBtn.addEventListener("click", () => {
+  const title = titleInput.value.trim();
+  const description = descriptionInput.value.trim();
 
-  // create h3 for title
-  var title_h3 = document.createElement("h3");
-  title_h3.classList.add("task-title");
-  title_h3.textContent = title;
+  if (title === "" || description === "") {
+    alert("Please provide both title and description");
+    return;
+  }
 
-  // create p for task description
-  var description_p = document.createElement("p");
-  description_p.classList.add("task-description");
-  description_p.textContent = description;
+  // Create new list item
+  const listItem = document.createElement("li");
+  listItem.classList.add("task-item");
 
-  // append h2 and p to li
-  listItem.appendChild(title_h3);
-  listItem.appendChild(description_p);
+  // Create h3 for title
+  const titleH3 = document.createElement("h3");
+  titleH3.classList.add("task-title");
+  titleH3.textContent = title;
 
-  // append to ui
-  task_list.appendChild(listItem);
-  title_input.value = "";
-  description_input.value = "";
-  add_task_section.style.display = "none";
+  // Create p for task description
+  const descriptionP = document.createElement("p");
+  descriptionP.classList.add("task-description");
+  descriptionP.textContent = description;
+
+  // status p
+
+  statusPara.textContent = "In Progress";
+
+  // Append h3, p, and status to li
+  listItem.appendChild(titleH3);
+  listItem.appendChild(descriptionP);
+  listItem.appendChild(statusPara);
+
+  // Append li to ul
+  taskList.appendChild(listItem);
+
+  // Clear input fields
+  titleInput.value = "";
+  descriptionInput.value = "";
+
+  // Hide add task section and show task list section
+  addTaskSection.style.display = "none";
+  taskListSection.style.display = "flex";
+});
+// Add event listener to new list item for marking completion
+listItem.addEventListener("click", () => {
+  listItem.classList.add("completed");
+  statusPara.textContent = "Completed";
 });

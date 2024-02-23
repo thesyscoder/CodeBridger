@@ -8,8 +8,5 @@
     "start": "nodemon index.js"
   },
   "author": "thesyscoder",
-  "license": "ISC",
-  "dependencies": {
-    "nodemon": "^3.0.3"
-  }
+  "license": "ISC"
 }

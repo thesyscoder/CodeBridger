@@ -14,12 +14,13 @@ Welcome to the array practice questions designed for beginners in Data Structure
 2. **Find Maximum Number**: Find the largest number in the array.
 3. **Find Minimum Number**: Find the smallest number in the array.
 4. **Reverse Array**: Reverse the order of elements in the array.
-5. **Check Palindrome Array**: Determine if the array is a palindrome (reads the same forwards and backwards).
-6. **Find Average of Array Elements**: Calculate the average value of all elements in the array.
-7. **Remove Duplicates from Array**: Remove any duplicate elements from the array.
-8. **Find Index of an Element**: Find the index of a specified element in the array.
-9. **Merge Two Arrays**: Combine two arrays into a single array.
-10. **Check for Subarray**: Determine if one array is a contiguous subarray of another.
+5. **Find Even and Odd**: Fine the even and odd numbers in the array.
+6. **Check Palindrome Array**: Determine if the array is a palindrome (reads the same forwards and backwards).
+7. **Find Average of Array Elements**: Calculate the average value of all elements in the array.
+8. **Remove Duplicates from Array**: Remove any duplicate elements from the array.
+9. **Find Index of an Element**: Find the index of a specified element in the array.
+10. **Merge Two Arrays**: Combine two arrays into a single array.
+11. **Check for Subarray**: Determine if one array is a contiguous subarray of another.
 
 ## Medium
 

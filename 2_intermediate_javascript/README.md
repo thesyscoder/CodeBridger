@@ -1,66 +1,91 @@
-# Intermediate JavaScript
+# JavaScript Practice Problems
 
-## Description
-Explore intermediate concepts of JavaScript including arrays, objects, ES6+ features, DOM manipulation, and error handling.
+This repository contains practice problems to enhance your JavaScript skills. The problems are categorized from easy to hard, covering various JavaScript concepts.
 
-## Problem Statements
-1. Sum of elements in an array.
-      - **Input:** An array `arr` of integers.
-      - **Expected Pseudo Code:**
-          ```
-          sum = 0
-          for each element in arr
-              sum += element
-          print sum
-          ```
+## Array Problems
 
-2. Remove duplicates from an array.
-      - **Input:** An array `arr` with duplicates.
-      - **Expected Pseudo Code:**
-          ```
-          newArr = []
-          for each element in arr
-              if element not in newArr
-                  newArr.push(element)
-          print newArr
-          ```
+### Easy
 
-3. Maximum and minimum elements in an array.
-      - **Input:** An array `arr` of integers.
-      - **Expected Pseudo Code:**
-          ```
-          max = arr[0]
-          min = arr[0]
-          for each element in arr
-              if element > max
-                  max = element
-              if element < min
-                  min = element
-          print max, min
-          ```
+1. **Sum of Elements:** Calculate the sum of all elements in an array of integers.
+2. **Remove Duplicates:** Remove duplicate elements from an array.
+3. **Count Odd Numbers:** Count the number of odd numbers in an array.
+4. **Merge Arrays:** Merge two sorted arrays into a single sorted array.
+5. **Find Maximum:** Find the maximum element in an array.
+6. **Find Minimum:** Find the minimum element in an array.
 
-4. Sort an array of integers.
-      - **Input:** An array `arr` of integers.
-      - **Expected Pseudo Code:**
-          ```
-          arr.sort()
-          print arr
-          ```
+### Medium
 
-5. Check equality of two arrays.
-      - **Input:** Two arrays `arr1` and `arr2`.
-      - **Expected Pseudo Code:**
-          ```
-          if arr1.length != arr2.length
-              print "Not Equal"
-          else
-              isEqual = true
-              for i from 0 to arr1.length
-                  if arr1[i] != arr2[i]
-                      isEqual = false
-                      break
-              if isEqual
-                  print "Equal"
-              else
-                  print "Not Equal"
-          ```
+7. **Rotate Array:** Rotate the elements of an array to the right by a given number of steps.
+8. **Subarray Sum:** Find if there exists a subarray with a given sum in an array of integers.
+9. **Product Except Self:** Given an array, return an array where each index stores the product of all elements except itself.
+10. **Stock Prices:** Given an array representing stock prices, find the maximum profit that can be obtained by buying and selling stocks.
+
+## Object Problems
+
+### Easy
+
+1. **Access Property:** Access a specific property of an object.
+2. **Add Property:** Add a new property to an object.
+3. **Delete Property:** Delete a property from an object.
+
+### Medium
+
+4. **Object Comparison:** Compare two objects to determine if they have the same properties and values.
+5. **Object Iteration:** Iterate over the properties of an object and perform a specific operation.
+
+### Hard
+
+6. **Deep Clone Object:** Create a deep clone of an object, ensuring that nested objects are also cloned.
+7. **Object Inheritance:** Implement inheritance between objects in JavaScript.
+
+## ES6+ Features Problems
+
+### Easy
+
+1. **Arrow Functions:** Convert a traditional function to an arrow function.
+2. **Template Literals:** Use template literals to concatenate strings and variables.
+3. **Destructuring Assignment:** Destructure an object or array to extract specific values.
+
+### Medium
+
+4. **Spread Operator:** Use the spread operator to merge arrays or objects.
+5. **Default Parameters:** Implement default parameters in a function.
+6. **Rest Parameters:** Use rest parameters to handle an arbitrary number of arguments in a function.
+
+### Hard
+
+7. **Promises:** Implement asynchronous behavior using Promises.
+8. **Async/Await:** Refactor Promise-based code to use async/await syntax.
+
+## DOM Manipulation Problems
+
+### Easy
+
+1. **Change Text:** Change the text content of an HTML element using JavaScript.
+2. **Toggle Class:** Toggle a CSS class on an HTML element.
+3. **Hide Element:** Hide an HTML element using JavaScript.
+
+### Medium
+
+4. **Create Element:** Create a new HTML element dynamically using JavaScript.
+5. **Event Listener:** Attach an event listener to an HTML element and perform a specific action.
+
+### Hard
+
+6. **Drag and Drop:** Implement drag and drop functionality using the HTML Drag and Drop API.
+7. **DOM Traversal:** Traverse the DOM tree to find specific elements or perform a specific operation.
+
+## Error Handling Problems
+
+### Easy
+
+1. **Try/Catch:** Implement error handling using try/catch blocks.
+2. **Throw Error:** Throw a custom error with a specific message.
+
+### Medium
+
+3. **Error Types:** Handle different types of errors (e.g., SyntaxError, ReferenceError) gracefully.
+
+### Hard
+
+4. **Promise Error Handling:** Handle errors in asynchronous code using Promises.

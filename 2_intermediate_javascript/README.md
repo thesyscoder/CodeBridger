@@ -13,30 +13,43 @@ This repository contains practice problems to enhance your JavaScript skills. Th
 5. **Find Maximum:** Find the maximum element in an array.
 6. **Find Minimum:** Find the minimum element in an array.
 
-### Medium
-
-7. **Rotate Array:** Rotate the elements of an array to the right by a given number of steps.
-8. **Subarray Sum:** Find if there exists a subarray with a given sum in an array of integers.
-9. **Product Except Self:** Given an array, return an array where each index stores the product of all elements except itself.
-10. **Stock Prices:** Given an array representing stock prices, find the maximum profit that can be obtained by buying and selling stocks.
-
-## Object Problems
+## Objects Problems
 
 ### Easy
 
-1. **Access Property:** Access a specific property of an object.
-2. **Add Property:** Add a new property to an object.
-3. **Delete Property:** Delete a property from an object.
+1. **Object Creation:** Create an object representing a car with properties like make, model, and year. Print out the details of the car.
+
+2. **Object Modification:** Modify the car object from the previous task to include a new property color. Update the color of the car and print the updated details.
+
+3. **Accessing Object Properties:** Create an object representing a person with properties name, age, and gender. Print out each property of the person object.
+
+4. **Adding Methods to Objects:** Extend the person object from the previous task with a method introduce that prints a greeting including the person's name.
+
+5. **Object Iteration:** Create an object representing a shopping list with items and quantities. Write a function to loop through the shopping list and print each item with its quantity.
 
 ### Medium
 
-4. **Object Comparison:** Compare two objects to determine if they have the same properties and values.
-5. **Object Iteration:** Iterate over the properties of an object and perform a specific operation.
+1. **Object Comparison:** Create two objects representing different students with properties like name, age, and grade. Write a function to compare the ages of the students and print the older student's name.
+
+2. **Prototype Inheritance:** Define a parent object Vehicle with properties make and model. Create a child object Car that inherits from Vehicle and adds a property numDoors. Print the details of a car object.
+
+3. **Object Composition:** Define two objects representing a rectangle and a circle with properties like width, height, and radius. Write a function to calculate the total area when both shapes are combined.
+
+4. **Object Destructuring:** Create an object representing a user with properties name and email. Use object destructuring to extract the user's name and email into separate variables.
+
+5. **Object Cloning:** Create an object representing a book with properties like title, author, and genre. Write a function to clone the book object into a new object and modify one of its properties.
 
 ### Hard
 
-6. **Deep Clone Object:** Create a deep clone of an object, ensuring that nested objects are also cloned.
-7. **Object Inheritance:** Implement inheritance between objects in JavaScript.
+1. **Object Serialization:** Define an object representing a product with properties like name, price, and category. Serialize the object into JSON format and then parse it back into an object.
+
+2. **Object Immutability:** Create an object representing a configuration with properties like theme, language, and fontSize. Write a function to return a new object with an updated theme, keeping the original configuration intact.
+
+3. **Object Composition with ES6 Classes:** Define a class Animal with properties name and type. Create a class Dog that extends Animal and adds a property breed. Instantiate a dog object and print its details.
+
+4. **Object Manipulation with Object.assign():** Create two objects representing users with properties like name and email. Use Object.assign() to merge the properties of both users into a new object.
+
+5. **Object Extension with Spread Operator:** Define an object representing a product with properties like name, price, and description. Create a new product object with the same properties but with an additional property discount.
 
 ## ES6+ Features Problems
 
@@ -89,3 +102,7 @@ This repository contains practice problems to enhance your JavaScript skills. Th
 ### Hard
 
 4. **Promise Error Handling:** Handle errors in asynchronous code using Promises.
+
+```
+
+```

@@ -7,7 +7,7 @@ import checkEvenOdd from "../src/check_even_odd.js";
 /**
  * Test cases for the checkEvenOdd function.
  */
-describe("checkEvenOdd()", () => {
+describe("checkEvenOdd() Function", () => {
   /**
    * Tests that checkEvenOdd returns "Even" if the input is an even number.
    */

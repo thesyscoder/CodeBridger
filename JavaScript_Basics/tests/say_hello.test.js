@@ -6,7 +6,7 @@
 import { assert } from "chai";
 import sayHello from "../src/say_hello.js";
 
-describe("sayHello()", () => {
+describe("sayHello() Function", () => {
   it('should return "Hello, World!"', () => {
     assert.equal(sayHello(), "Hello, World!");
   });

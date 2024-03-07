@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha 'tests/**/*.js'"
   },
   "keywords": [],
   "author": "",

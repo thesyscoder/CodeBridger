@@ -9,7 +9,7 @@ import calculate from "../src/calculator.js";
  * Test cases for the calculate function
  */
 
-describe("calculate(", () => {
+describe("calculate() Function", () => {
   /**
    * Tests that calculate function returns addition of two numbers
    */

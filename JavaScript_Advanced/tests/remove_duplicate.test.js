@@ -10,7 +10,7 @@ import removeDuplicate from "../src/remove_duplicate.js";
 
 describe("removeDuplicate() Function", () => {
   /**
-   * Test that if removeDuplicate() function return "Empty" if input array is empty
+   * Test that removeDuplicate() function return "Empty" if input array is empty
    */
 
   it("should return empty if input array is empty", () => {

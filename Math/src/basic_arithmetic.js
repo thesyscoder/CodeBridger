@@ -53,6 +53,7 @@ function division(x, y) {
  * @param {number} x - The dividend
  * @param {number} y - The divisor (must be non-zero)
  * @returns {number} The remainder when x is divided by y
+ * @author thesyscoder
  */
 function modulus(x, y) {
   return x % y;

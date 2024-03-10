@@ -1,0 +1,12 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "- **Variables:** Data types, declaration, scope - **Operators:** Arithmetic, comparison, logical, bitwise - **Control Flow:** Conditional statements (if/else), loops (for, while, do-while) - **Functions:** Defining, calling, arguments, recursion - **Arrays:** Basic operations, built-in methods (map, filter, reduce) - **Objects:** Key-value pairs, accessing properties, methods - **classes** serve as blueprints for creating **objects**. Objects encapsulate both data (properties) and behavior (methods). - **Encapsulation** refers to the concept of hiding the internal state of an object and restricting access to it from outside the class. This promotes data integrity by preventing unintended manipulation of data. In languages like Java, this is often achieved through access modifiers like private, protected, and public. - **Inheritance** is a mechanism where a new class can inherit properties and methods from an existing class. This promotes code reusability and allows for the creation of hierarchies of classes. Inheritance enables a subclass to inherit behaviors and characteristics of its superclass while also allowing for customization and extension. - **Polymorphism** is the ability of objects of different classes to respond differently to the same method call. This can be achieved through method overriding or dynamic method binding in some languages. Polymorphism allows for code flexibility and adaptability, as objects can exhibit different behaviors based on their specific implementations of methods.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

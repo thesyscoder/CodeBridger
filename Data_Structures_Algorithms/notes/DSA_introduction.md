@@ -37,3 +37,5 @@ How well an algorithm works depends on how much time and storage it needs to do 
 <p align="center">
     <img src="./assets/linear-time.png" alt="Data structure types" width="300">
 </p>
+
+[linear time complexity code](<../src/Big(O)/linear_time.js>)

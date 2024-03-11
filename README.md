@@ -17,7 +17,8 @@ This roadmap combines essential data structures, algorithms, and foundational ma
   - **Functions:** Defining, calling, arguments, recursion
   - **Arrays:** Basic operations, built-in methods (map, filter, reduce)
   - **Objects:** Key-value pairs, accessing properties, methods
-  - **classes** serve as blueprints for creating **objects**. Objects encapsulate both data (properties) and behavior (methods).
+  - **classes** serve as blueprints for creating
+  - **objects**. Objects encapsulate both data (properties) and behavior (methods).
   - **Encapsulation** refers to the concept of hiding the internal state of an object and restricting access to it from outside the class. This promotes data integrity by preventing unintended manipulation of data. In languages like Java, this is often achieved through access modifiers like private, protected, and public.
   - **Inheritance** is a mechanism where a new class can inherit properties and methods from an existing class. This promotes code reusability and allows for the creation of hierarchies of classes. Inheritance enables a subclass to inherit behaviors and characteristics of its superclass while also allowing for customization and extension.
   - **Polymorphism** is the ability of objects of different classes to respond differently to the same method call. This can be achieved through method overriding or dynamic method binding in some languages. Polymorphism allows for code flexibility and adaptability, as objects can exhibit different behaviors based on their specific implementations of methods.
@@ -87,11 +88,3 @@ This roadmap combines essential data structures, algorithms, and foundational ma
    - Predictable state management container for complex applications
    - Actions, reducers, store
    - Example: Integrating Redux into a React application for centralized state management
-
-**Additional Resources:**
-
-- Practice on online platforms like HackerRank, LeetCode
-- Explore advanced topics like concurrency, distributed systems
-- Build personal projects to apply your learnings
-
-This roadmap provides a solid foundation for mastering data structures, algorithms, and essential web development tools. Remember to practice consistently, explore further, and build projects to solidify your understanding.

@@ -20,7 +20,7 @@
  */
 
 /**
- * Time complexity - o(n^2)
+ * Time complexity - O(n^2)
  */
 
 // This function performs the Bubble Sort algorithm to sort an array in ascending order

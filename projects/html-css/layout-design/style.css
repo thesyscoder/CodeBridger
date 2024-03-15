@@ -1,0 +1,95 @@
+/* Reset and global styles */
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Header */
+.header {
+  background-color: rgb(217, 89, 89);
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-list,
+.social-list {
+  display: flex;
+}
+
+.menu-item:not(:first-child),
+.social-icon:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  height: 60vh;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.text-container,
+.image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+}
+
+.text-container {
+  background-color: blue;
+}
+
+.image-container {
+  background-color: rgb(255, 0, 200);
+}
+
+/* Box section */
+.box-container {
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+  background-color: rgb(201, 201, 201);
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(221, 155, 34);
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 16px;
+}
+
+/* Footer */
+footer {
+  height: 10vh;
+  background-color: brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}

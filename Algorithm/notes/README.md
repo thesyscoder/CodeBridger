@@ -21,3 +21,12 @@ An algorithm consists of a series of sequential instructions designed to solve p
    - Making locally optimal choices at each step with the hope of finding a global optimum (e.g., Dijkstra's algorithm for shortest paths)
 5. **Backtracking:**
    - Systematically exploring all potential solutions using recursion (e.g., maze solving)
+
+## Searching
+
+## Sorting
+
+A sorting algorithms is an algorithms are used to arrange the elements in specific order. types of sorting algorithms
+Bubble sort, selection sort, insertion sort, merge sort, quick sort, heap sort
+
+- **Bubble Sort:** Bubble sort is a sorting algorithm that iteratively steps through a list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the entire list is sorted, with larger elements "bubbling" to the top.

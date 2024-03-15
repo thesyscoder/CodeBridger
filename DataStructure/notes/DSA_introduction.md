@@ -39,3 +39,17 @@ How well an algorithm works depends on how much time and storage it needs to do 
 </p>
 
 [linear time complexity code](<../src/Big(O)/linear_time.js>)
+
+<hr>
+<hr>
+
+<!-- Arrays -->
+
+## Arrays
+
+An array is a data structure used to store multiple elements.
+
+```javascript
+const arr = [1, 2, 43, 5, 6];
+console.log(arr);
+```

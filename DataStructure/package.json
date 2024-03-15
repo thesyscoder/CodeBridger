@@ -4,6 +4,9 @@
   "description": "Welcome to the Data Structures & Algorithms (DSA) folder! This folder is dedicated to practicing and mastering data structures and algorithms.",
   "main": "index.js",
   "type": "module",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "test": "mocha"
   },

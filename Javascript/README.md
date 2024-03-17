@@ -11,6 +11,7 @@ Welcome to the comprehensive guide to JavaScript! This guide covers fundamental 
 - [Ternary Operator](#ternary-operator)
 - [Functions](#functions)
 - [Asynchronous JavaScript](#asynchronous-javascript)
+- [DOM Manipulation](#dom-manipulation)
 
 ## Variables
 
@@ -158,4 +159,13 @@ async function getData() {
 
 // Usage
 getData();
+```
+
+## DOM Manipulation
+
+DOM manipulation refers to the process of dynamically changing the structure, content, or style of a web page using JavaScript. "DOM" stands for Document Object Model, which is a tree-like representation of the HTML elements on a webpage. JavaScript provides a set of methods and properties for accessing and modifying this DOM tree.
+
+```javascript
+var element = document.getElementById("example");
+element.innerHTML = "New content";
 ```

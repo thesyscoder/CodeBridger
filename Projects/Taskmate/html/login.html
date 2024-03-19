@@ -7,16 +7,17 @@
     <link rel="icon" type="image/x-icon" href="../assets/logo.ico" />
     <link rel="stylesheet" href="../styles/login.css" />
     <link rel="stylesheet" href="../styles/style.css" />
-    <script src="../js/main.js" defer></script>
+    <script src="../js/login.js" defer></script>
   </head>
   <body>
     <!-- login page design -->
     <div class="main-container">
       <div class="login-form">
+        <p id="message"></p>
         <img src="../assets/logo.png" alt="logo" class="logo" />
-        <form action="index.html">
-          <h2>Login to Taskmate</h2>
-          <p>Hi, Welcome back 👋🏻</p>
+        <h2>Login to Taskmate</h2>
+        <p>Hi, Welcome back 👋🏻</p>
+        <form id="loginForm">
           <div class="input-form">
             <input
               type="text"
@@ -30,7 +31,7 @@
               id="password"
               placeholder="Password"
             />
-            <button class="login" id="login">login</button>
+            <button class="login" id="login" type="submit">Login</button>
           </div>
         </form>
       </div>

@@ -10,6 +10,7 @@
 .login-form {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 4rem;
+  background-color: var(--white-color);
 }
 .logo {
   width: 100px;
@@ -46,4 +47,13 @@ button {
   color: var(--white-color);
   padding: 1rem;
   border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#message {
+  padding: 0.6rem;
+  color: white;
+  border-radius: 4px;
+  display: none;
 }

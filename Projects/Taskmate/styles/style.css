@@ -10,8 +10,8 @@
   --primary-color: #1f16d0;
   --white-color: #fff;
   --black-color: #161616;
+  --gray-color: rgb(241, 241, 241);
 }
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #eafeff;
 }

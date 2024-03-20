@@ -1,0 +1,47 @@
+/* design create task card */
+h2 {
+  font-weight: normal;
+}
+
+.task-card {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 4rem;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+input {
+  width: 26em;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  background-color: white;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 4px;
+}
+button {
+  background: var(--primary-color);
+  border: none;
+  outline: none;
+  color: var(--white-color);
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.status {
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}

@@ -7,12 +7,13 @@
     <link rel="icon" type="image/x-icon" href="../assets/logo.ico" />
     <link rel="stylesheet" href="../styles/task.css" />
     <link rel="stylesheet" href="../styles/style.css" />
-    <script src="../js/main.js" defer></script>
+    <script src="../js/tasks.js" defer></script>
   </head>
   <body>
     <div class="task-card">
       <form id="newTaskForm">
         <div class="card">
+          <p id="message"></p>
           <h2>Create new task</h2>
           <input
             type="text"
@@ -31,7 +32,7 @@
             <option value="inprogress">In Progress</option>
             <option value="completed">Completed</option>
           </select>
-          <button class="submit" id="done">Done</button>
+          <button class="submit" id="done" type="submit">Done</button>
         </div>
       </form>
     </div>

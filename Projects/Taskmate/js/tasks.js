@@ -36,7 +36,7 @@ function createNewTask() {
     // save the task into local storage
     saveTask(task);
     displayMessage("Task added", message_box, "#5cb85c");
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   });
 }
 

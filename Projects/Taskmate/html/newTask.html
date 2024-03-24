@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskmate | New Task</title>
+    <link rel="icon" type="image/x-icon" href="../assets/logo.ico" />
+    <link rel="stylesheet" href="../styles/task.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../js/tasks.js" defer></script>
+  </head>
+  <body>
+    <div class="task-card">
+      <form id="newTaskForm">
+        <div class="card">
+          <p id="message"></p>
+          <h2>Create new task</h2>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Enter task title"
+          />
+          <input
+            type="text"
+            name="description"
+            id="description"
+            placeholder="Enter task description"
+          />
+          <select name="status" id="status" class="status">
+            <option value="todo">TO DO</option>
+            <option value="inprogress">In Progress</option>
+            <option value="completed">Completed</option>
+          </select>
+          <button class="submit" id="done" type="submit">Done</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

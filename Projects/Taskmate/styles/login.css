@@ -1,0 +1,59 @@
+/* design login page */
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login-form {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 4rem;
+  background-color: var(--white-color);
+}
+.logo {
+  width: 100px;
+  height: 100px;
+}
+h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: normal;
+}
+p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 26em;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  background-color: white;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 4px;
+}
+
+button {
+  background: var(--primary-color);
+  border: none;
+  outline: none;
+  color: var(--white-color);
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#message {
+  padding: 0.6rem;
+  color: white;
+  border-radius: 4px;
+  display: none;
+}

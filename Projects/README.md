@@ -11,11 +11,16 @@ This repository contains a collection of projects focusing on HTML, CSS, JavaScr
 
 ## HTML/CSS and Javascript Projects
 
-1. **Project Name**: [TODO](./TODO/index.html)
+1. **Project Name**: [TODO](./Taskmate/html/login.html)
 
    - **Description**: A simple TODO application to manage tasks.
    - **Technologies Used**: HTML, CSS, JS
    - **Additional Notes**: This project allows users to add, delete, and mark tasks as completed. It's built using HTML and CSS for the user interface. Future updates may include integrating JavaScript for dynamic functionality and improving user experience.
+
+   - **Preview**
+     <img src="./Taskmate/assets/login.png" style="width:200px; height:200px">
+     <img src="./Taskmate/assets/create-task.png" style="width:200px; height:200px">
+     <img src="./Taskmate/assets/board.png" style="width:200px; height:200px">
 
 ## Data Structures and Algorithms (DSA) Projects
 

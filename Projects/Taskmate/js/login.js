@@ -35,7 +35,7 @@ function handleLoginFormSubmission() {
     ) {
       // Redirect to index.html upon successful login
       displayMessage("Login success", message_box, "#5cb85c");
-      window.location.href = "index.html";
+      window.location.href = "html/home.html";
     } else {
       displayMessage("Login failed", message_box, "#d9534f"); // Red color for login failure
       clearInputFields();

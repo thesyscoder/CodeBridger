@@ -22,6 +22,15 @@ This repository contains a collection of projects focusing on HTML, CSS, JavaScr
      <img src="./Taskmate/assets/create-task.png" style="width:200px; height:200px">
      <img src="./Taskmate/assets/board.png" style="width:200px; height:200px">
 
+2. **Project Name**: [SkySense](./SkySense/index.html)
+
+   - **Description**: SkySense is a simple weather application that allows users to check the current weather conditions for their location.
+   - **Technologies Used**: HTML, CSS, JS
+   - **Additional Notes**: user's location or allows manual input of location
+   - **URL**: [Skysense](https://thesyscoder.github.io/LevelUpJS/)
+   - **Preview** <br>
+     <img src="./SkySense/assets/preview.png" style="width:200px; height:200px">
+
 ## Data Structures and Algorithms (DSA) Projects
 
 ## React Projects

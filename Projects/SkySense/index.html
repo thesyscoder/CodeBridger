@@ -5,11 +5,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SkySense</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <!-- main container -->
+    <!-- navbar -->
+    <header class="header">
+      <nav class="navbar">
+        <img src="assets/weather.png" alt="logo" class="logo" />
+        <form id="weatherFormInput">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Enter the city"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </nav>
+    </header>
+    <!-- weather card section -->
     <div class="container">
-      <h1>hello</h1>
+      <div class="weather-card">
+        <h2 id="city"></h2>
+        <img src="assets/weather.png" alt="weather" class="image" />
+        <h2 class="description" id="description"></h2>
+        <p id="currentDate"></p>
+        <h1 class="temp" id="temp"></h1>
+      </div>
     </div>
   </body>
 </html>

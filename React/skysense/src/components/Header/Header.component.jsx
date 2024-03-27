@@ -9,6 +9,7 @@ const HeaderComponents = () => {
           <div className="logo">
             <img src={logo} alt="skysense_logo" className="logo-image" />
             <h2>SkySense</h2>
+            <p>Hello</p>
           </div>
         </nav>
       </header>

@@ -11,7 +11,7 @@ This repository contains a collection of projects focusing on HTML, CSS, JavaScr
 
 ## HTML/CSS and Javascript Projects
 
-1. **Project Name**: [TaskMate](./Taskmate/html/login.html)
+1. **Project Name**: [TaskMate](./javascript/Taskmate/html/login.html)
 
    - **Description**: A simple TODO application to manage tasks.
    - **Technologies Used**: HTML, CSS, JS
@@ -22,7 +22,7 @@ This repository contains a collection of projects focusing on HTML, CSS, JavaScr
      <img src="./Taskmate/assets/create-task.png" style="width:200px; height:200px">
      <img src="./Taskmate/assets/board.png" style="width:200px; height:200px">
 
-2. **Project Name**: [SkySense](./SkySense/index.html)
+2. **Project Name**: [SkySense](./javascript/SkySense/index.html)
 
    - **Description**: SkySense is a simple weather application that allows users to check the current weather conditions for their location.
    - **Technologies Used**: HTML, CSS, JS

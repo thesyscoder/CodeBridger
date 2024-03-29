@@ -18,9 +18,9 @@ This repository contains a collection of projects focusing on HTML, CSS, JavaScr
    - **Additional Notes**: This project allows users to add, delete, and mark tasks as completed. It's built using HTML and CSS for the user interface. Future updates may include integrating JavaScript for dynamic functionality and improving user experience.
    - **URL**: [Taskmate](https://thesyscoder.github.io/LevelUpJS/)
    - **Preview** <br>
-     <img src="./Taskmate/assets/login.png" style="width:200px; height:200px">
-     <img src="./Taskmate/assets/create-task.png" style="width:200px; height:200px">
-     <img src="./Taskmate/assets/board.png" style="width:200px; height:200px">
+     <img src="./javascript/Taskmate/assets/login.png" style="width:200px; height:200px">
+     <img src="./javascript/Taskmate/assets/create-task.png" style="width:200px; height:200px">
+     <img src="./javascript/Taskmate/assets/board.png" style="width:200px; height:200px">
 
 2. **Project Name**: [SkySense](./javascript/SkySense/index.html)
 
@@ -29,7 +29,7 @@ This repository contains a collection of projects focusing on HTML, CSS, JavaScr
    - **Additional Notes**: user's location or allows manual input of location
    - **URL**: [Skysense](https://thesyscoder.github.io/LevelUpJS/)
    - **Preview** <br>
-     <img src="./SkySense/assets/preview.png" style="width:200px; height:200px">
+     <img src="./javascript/SkySense/assets/preview.png" style="width:200px; height:200px">
 
 ## Data Structures and Algorithms (DSA) Projects
 

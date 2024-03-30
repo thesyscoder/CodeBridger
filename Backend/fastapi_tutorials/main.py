@@ -21,7 +21,7 @@ def index():
 # Path parameter
 
 
-@app.get("/blogs/{id}", status_code=status.HTTP_200_OK)
+@app.get("/blogs/{id}", status_code=status.HTTP_200_OK, tags=["blogs"])
 def get_blog_by_id(id: int, response: Response):
     """
     Retrieve a blog by its ID.
@@ -40,7 +40,7 @@ class BlogTypes(str, Enum):
     story = "story"
 
 
-@app.get("/blogs/type/{type}")
+@app.get("/blogs/type/{type}", tags=["blogs"], summary="Get the blog type", description="Get the blogs type like short, story")
 def get_blog_type(type: BlogTypes):
     """
     Retrieve blogs based on their types.
@@ -50,7 +50,7 @@ def get_blog_type(type: BlogTypes):
 # Query parameters
 
 
-@app.get("/search/")
+@app.get("/search/", tags=["blogs"], summary="Search the blogs", description="Search endpoint to search blogs based on query parameter 'q'.")
 def search(q: str = Query(None, min_length=3, max_length=50)):
     """
     Search endpoint to search blogs based on query parameter 'q'.

@@ -1,4 +1,4 @@
-## Comprehensive JavaScript Roadmap with JavaScript, Math, DSA and Frameworks
+## Comprehensive Web Development Roadmap with JavaScript, Python, and FastAPI
 
 This roadmap combines essential data structures, algorithms, and foundational math concepts with practical JavaScript implementation. It also introduces popular web frameworks like Express.js, React, and Redux for a well-rounded understanding.
 

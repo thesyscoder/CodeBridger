@@ -4,22 +4,29 @@ Module: main.py
 Main module for the blogger app.
 """
 
-# import required modules
 from fastapi import FastAPI, Response
-
-
-# initialize the app instance
+from routers.blogs_router import blogRouter
 
 app = FastAPI()
 
 
-# Initialize the root router
 @app.get(
     "/",
     tags=["index"],
-    description="Root route of blogger app.",
     summary="Welcome message route for the blogger application.",
+    description="Root route of blogger app.",
 )
 async def index():
-    Response.stat
+    """
+    Welcome Message Route
+
+    Returns a welcome message for the blogger application.
+
+    Returns:
+        dict: A dictionary containing a welcome message.
+    """
     return {"message": "Welcome to the blogger application."}
+
+
+# include routers
+app.include_router(router=blogRouter)

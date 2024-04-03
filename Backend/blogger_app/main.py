@@ -4,7 +4,7 @@ Module: main.py
 Main module for the blogger app.
 """
 
-from fastapi import FastAPI, Response
+from fastapi import FastAPI
 from routers.blogs_router import blogRouter
 
 app = FastAPI()

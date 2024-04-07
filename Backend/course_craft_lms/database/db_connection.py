@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import SQLAlchemyError
 
 # Database URL
-DATABASE_URL = "postgresql+psycopg2://thesyscoder@localhost/coursecraftdb"
+DATABASE_URL = "postgresql+psycopg2://postgres:root@192.168.31.172/coursecraftlms"
 
 BASE = declarative_base()
 # function to create SQLAlchemy engine and session

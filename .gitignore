@@ -10,7 +10,7 @@ node_modules/
 
 # Ignore environment files
 .env
-
+venv
 # Ignore log files
 *.log
-.vscode
+.vscode/

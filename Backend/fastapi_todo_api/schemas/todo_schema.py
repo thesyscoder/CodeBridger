@@ -24,3 +24,7 @@ class Todo(BaseModel):
     title: str = Field(min_length=1, description="Title of todo.")
     description: str = Field(default=None, description="Description of todo.")
     is_completed: bool = Field(default=False, description="Status of todo.")
+
+    class Config:
+        orm_mode = True
+        from_attributes = True

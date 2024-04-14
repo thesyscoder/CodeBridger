@@ -1,0 +1,11 @@
+-- Title: Create PostgreSQL Database
+-- Description: This script creates a new PostgreSQL database named postgres_tutorial.
+-- Author: thesyscoder
+--
+-- Syntax:
+--     CREATE DATABASE database_name;
+--
+-- Example:
+--     CREATE DATABASE postgres_tutorial;
+--     -- Output: The database 'postgres_tutorial' is created successfully.
+CREATE DATABASE postgres_tutorial;

@@ -27,3 +27,10 @@ CREATE TABLE IF NOT EXISTS person (
     gender VARCHAR(6) NOT NULL,
     date_of_birth DATE NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS cars (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    make VARCHAR(50) NOT NULL,
+    model VARCHAR(50) NOT NULL,
+    price VARCHAR(50) NOT NULL
+);

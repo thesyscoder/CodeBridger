@@ -1,2 +1,0 @@
--- List all databases
-\ list

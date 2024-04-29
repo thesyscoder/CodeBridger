@@ -1,14 +1,8 @@
-// Sign Up
-
 import React from "react";
-import "./signup.style.css";
+import "./signup.style.scss";
 
 const SignUpPage = () => {
-  return (
-    <div className="container">
-      <h1>Sign Up</h1>
-    </div>
-  );
+  return <div>SignUpPage</div>;
 };
 
-export default React.memo(SignUpPage);
+export default SignUpPage;

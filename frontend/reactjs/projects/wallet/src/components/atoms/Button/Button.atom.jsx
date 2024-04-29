@@ -1,15 +1,8 @@
-// Button
-
 import React from "react";
-import "./button.style.css";
+import "./button.style.scss";
 
-const Button = ({ className = "primary", title, onClickAction }) => {
-  return (
-    <div className="button-container">
-      <button className={className} onClick={onClickAction}>
-        {title}
-      </button>
-    </div>
-  );
+const Button = () => {
+  return <div>Button</div>;
 };
-export default Button;
+
+export default React.memo(Button);

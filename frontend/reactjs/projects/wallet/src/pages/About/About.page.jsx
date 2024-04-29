@@ -1,12 +1,12 @@
 // About page
 
 import React from "react";
-import "./about.style.css";
+import "./about.style.scss";
 
 const AboutPage = () => {
   return (
-    <div className="container">
-      <h1>This is AboutPage</h1>
+    <div className="about-container">
+      <h1>This is about page</h1>
     </div>
   );
 };

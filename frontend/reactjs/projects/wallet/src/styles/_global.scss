@@ -1,0 +1,21 @@
+// Global style
+@import "typography";
+@import "colors";
+body {
+  font-family: $BASE_FONT_FAMILY;
+  font-size: $BASE_FONT_SIZE;
+  background-color: $BACKGROUND_COLOR;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+input {
+  font-family: $BASE_FONT_FAMILY;
+}

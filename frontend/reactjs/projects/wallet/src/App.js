@@ -1,13 +1,7 @@
 // App.js
 import React from "react";
-import "./App.css";
-import {
-  Outlet,
-  RouterProvider,
-  createBrowserRouter,
-  useLocation,
-} from "react-router-dom";
-import { Navbar } from "./components/molecules";
+import "./App.scss";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
   AboutPage,
   ErrorPage,
@@ -18,11 +12,8 @@ import {
 } from "./pages";
 
 const AppLayout = () => {
-  const location = useLocation();
-  const showNavbar = location.pathname !== "/";
   return (
     <>
-      {showNavbar && <Navbar />}
       <div className="content-container">
         <Outlet />
       </div>

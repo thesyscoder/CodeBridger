@@ -1,14 +1,7 @@
-// Sign In page
-
 import React from "react";
-import "./signin.style.css";
-
+import "./signin.style.scss";
 const SignInPage = () => {
-  return (
-    <div className="container">
-      <h1>Sign In</h1>
-    </div>
-  );
+  return <div>SignInPage</div>;
 };
 
-export default React.memo(SignInPage);
+export default SignInPage;

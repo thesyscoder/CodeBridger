@@ -1,0 +1,26 @@
+@import "../../../styles/colors";
+@import "../../../styles/mixins";
+@import "../../../styles/typography";
+
+// Button styles
+.button {
+  padding: 12px 24px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: $BASE_FONT_SIZE;
+  @include box-shadow;
+  cursor: pointer;
+}
+
+.primary {
+  @extend .button;
+  background-color: $PRIMARY_COLOR;
+  color: $WHITE_COLOR;
+}
+
+.secondary {
+  @extend .button;
+  background-color: $BACKGROUND_COLOR;
+  color: $PRIMARY_COLOR;
+}

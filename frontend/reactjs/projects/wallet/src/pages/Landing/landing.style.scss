@@ -1,0 +1,24 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+@import "../../styles/typography";
+
+// Landing page styles
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $BACKGROUND_COLOR;
+}
+
+.heading {
+  font-size: $BASE_FONT_SIZE * 2.4;
+  margin-bottom: 2rem;
+  span {
+    color: $PRIMARY_COLOR;
+  }
+}
+
+.sub-heading {
+  margin-bottom: 2rem;
+}

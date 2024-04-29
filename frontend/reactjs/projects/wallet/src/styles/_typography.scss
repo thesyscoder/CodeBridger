@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+// Define variables for typography
+
+$BASE_FONT_SIZE: 16px;
+$BASE_LINE_HEIGHT: 1.5;
+$BASE_FONT_FAMILY: "Montserrat", sans-serif;
+
+// Define mixins for typography styles
+
+@mixin heading {
+  font-family: $BASE_FONT_FAMILY;
+  font-weight: bold;
+  line-height: $BASE_LINE_HEIGHT;
+}
+
+@mixin body-text {
+  font-family: $BASE_FONT_FAMILY;
+  line-height: $BASE_LINE_HEIGHT;
+}
+
+// Define typography styles
+h1 {
+  @include heading();
+  font-size: $BASE_FONT_SIZE * 2;
+}
+
+h2 {
+  @include heading();
+  font-size: $BASE_FONT_SIZE * 1.5;
+}
+
+h3 {
+  @include heading();
+  font-size: $BASE_FONT_SIZE * 1.25;
+}
+
+p {
+  @include body-text();
+  font-size: $BASE_FONT_SIZE;
+}

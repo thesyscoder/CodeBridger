@@ -15,11 +15,8 @@ const useSignUpWithEmailAndPassword = () => {
         email,
         password
       );
-      const user = userCredential.user;
-      // You can do further actions here upon successful signup
-
       setIsLoading(false);
-      return user;
+      return userCredential.user;
     } catch (error) {
       setError(error.message);
       setIsLoading(false);

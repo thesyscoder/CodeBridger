@@ -2,13 +2,19 @@ import React, { useState } from "react";
 import "./signin.style.scss";
 import { Button, Input } from "../../components/atoms";
 import { Google } from "@icon-park/react";
+import { Link, useNavigate } from "react-router-dom";
+import useSignInWithEmailAndPassword from "../../hooks/signInWithEmail/useSignInWithEmailAndPassword";
+import { toast } from "react-toastify";
 const SignInPage = () => {
   // State to manage input values
   const [inputValues, setInputValues] = useState({
     email: "",
     password: "",
   });
+  const { loginWithEmailAndPassword, error, isLoading } =
+    useSignInWithEmailAndPassword();
 
+  const navigate = useNavigate();
   /**
    * Handle input change event
    * @param {Object} event - Input change event object
@@ -26,9 +32,19 @@ const SignInPage = () => {
    */
   const handleSubmit = () => {
     // Handle form submission here
+    const { email, password } = inputValues;
+    if (email !== "" && password !== "") {
+      const user = loginWithEmailAndPassword(email, password);
+      toast.success("Logged In");
+      console.log(user);
+      navigate("/home");
+    } else {
+      toast.error("Required email and password");
+      toast.error(error);
+    }
     setInputValues({
-      fullName: "",
       email: "",
+      password: "",
     });
   };
   return (
@@ -58,13 +74,22 @@ const SignInPage = () => {
         />
         <div className="button-container">
           {/* Submit button */}
-          <Button title={"Log In"} onClickAction={handleSubmit} />
+          <Button
+            title={"Log In"}
+            onClickAction={handleSubmit}
+            disabled={isLoading}
+          />
           {/* Sign in with Google button */}
           <Button
+            disabled={isLoading}
             title={"Sign In with Google"}
             className="secondary"
             icon={<Google theme="outline" size="18" />}
           />
+          {/* Link to sign in page */}
+          <p className="sub-heading">
+            Create an account? <Link to="/signup">Sign Up</Link>
+          </p>
         </div>
       </div>
     </div>

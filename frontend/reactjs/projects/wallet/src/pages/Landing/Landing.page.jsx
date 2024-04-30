@@ -20,10 +20,9 @@ const LandingPage = () => {
           <span>Sign Up for Wallet Today.</span>
         </h1>
         <p className="sub-heading">
-          Wallet is the powerful expense tracker that empowers you.<br></br>
-          Effortlessly track spending, categorize transactions, <br></br>and
-          uncover hidden spending patterns. <br></br>Achieve your financial
-          goals with <br></br>clear insights and budgeting tools.
+          Wallet is the powerful expense tracker that empowers you. Effortlessly
+          track spending, categorize transactions, <br></br>and uncover hidden
+          spending patterns.
         </p>
         <div className="buttons">
           <Button
@@ -34,7 +33,7 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="banner-container">
-        <img src={banner} alt="" />
+        <img src={banner} alt="" className="banner" />
       </div>
     </div>
   );

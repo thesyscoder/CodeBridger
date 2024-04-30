@@ -8,19 +8,31 @@
   border: none;
   outline: none;
   border-radius: 4px;
+  width: 100%;
   font-size: $BASE_FONT_SIZE;
   @include box-shadow;
   cursor: pointer;
+  transition: 1s ease-in-out;
+  display: flex; /* Added */
+  justify-content: center; /* Added */
+  align-items: center; /* Added */
 }
-
+// Icon styles
+.icon {
+  margin-right: 8px; // Adjust this value as needed
+}
 .primary {
   @extend .button;
   background-color: $PRIMARY_COLOR;
   color: $WHITE_COLOR;
+  &:hover {
+    @extend .secondary;
+  }
 }
 
 .secondary {
   @extend .button;
-  background-color: $BACKGROUND_COLOR;
   color: $PRIMARY_COLOR;
+  border: 1px solid;
+  background-color: $WHITE_COLOR;
 }

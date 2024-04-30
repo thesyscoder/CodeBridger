@@ -10,12 +10,16 @@ import {
   SignInPage,
   SignUpPage,
 } from "./pages";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const AppLayout = () => {
   return (
     <>
       <div className="content-container">
         <Outlet />
+        <ToastContainer />
       </div>
     </>
   );

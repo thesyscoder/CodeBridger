@@ -5,10 +5,12 @@ import "./landing.style.scss";
 import banner from "../../assets/wallet_banner.svg";
 import { Button } from "../../components/atoms";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const LandingPage = () => {
   const navigate = useNavigate();
-
+  const notify = () => toast("Wow so easy !");
   const handleNavigate = () => {
+    notify();
     navigate("/signup");
   };
   return (

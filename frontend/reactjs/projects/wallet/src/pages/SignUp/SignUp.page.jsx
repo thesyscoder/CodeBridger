@@ -3,6 +3,8 @@ import "./signup.style.scss";
 import { Button, Input } from "../../components/atoms";
 import { Google } from "@icon-park/react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import useSignUpWithEmailAndPassword from "../../hooks/signUpWithEmail/useSignUpWithEmailAndPassword";
 
 /**
  * Sign Up Page component
@@ -16,6 +18,8 @@ const SignUpPage = () => {
     password: "",
     confirmPassword: "",
   });
+  const { signUpWithEmailAndPassword, error, isLoading } =
+    useSignUpWithEmailAndPassword();
 
   /**
    * Handle input change event
@@ -34,13 +38,36 @@ const SignUpPage = () => {
    */
   const handleSubmit = () => {
     // Handle form submission here
+    const { fullName, email, password, confirmPassword } = inputValues;
+    if (
+      fullName !== "" &&
+      email !== "" &&
+      password !== "" &&
+      confirmPassword !== "" &&
+      password === confirmPassword
+    ) {
+      const user = signUpWithEmailAndPassword(email, password);
+      toast.success(`User is created.`);
+    } else {
+      toast.error("All fields are required or check password");
+      toast.error(error);
+    }
+
+    setInputValues({
+      fullName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
   };
 
   return (
     <div className="signup-container">
       <div className="signup-form-container">
         <div className="text-container">
-          <h1 className="heading">Sign Up</h1>
+          <h2 className="heading">
+            Sign Up on <span>Wallet.</span>
+          </h2>
           <p className="sub-heading">Join the Wallet for Your Finances.</p>
         </div>
         {/* Input fields */}
@@ -74,10 +101,14 @@ const SignUpPage = () => {
         />
         <div className="button-container">
           {/* Submit button */}
-          <Button title={"Create account"} onClickAction={handleSubmit} />
+          <Button
+            title={isLoading ? "Loading" : "Create an account"}
+            onClickAction={handleSubmit}
+          />
           {/* Sign up with Google button */}
           <Button
-            title={"Sign Up with Google"}
+            disabled={isLoading}
+            title={isLoading ? "Loading" : "Sign Up with Google"}
             className="secondary"
             icon={<Google theme="outline" size="18" />}
           />

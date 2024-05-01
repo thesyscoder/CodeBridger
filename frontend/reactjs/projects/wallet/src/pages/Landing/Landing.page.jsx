@@ -1,11 +1,13 @@
 // Landing Page
 
-import React from "react";
+import React, { useEffect } from "react";
 import "./landing.style.scss";
 import banner from "../../assets/wallet_banner.svg";
 import { Button } from "../../components/atoms";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase/firebase.config";
 const LandingPage = () => {
   const navigate = useNavigate();
   const notify = () => toast("Wow so easy !");
@@ -13,6 +15,13 @@ const LandingPage = () => {
     notify();
     navigate("/signup");
   };
+  const [user, loading] = useAuthState(auth);
+  useEffect(() => {
+    if (user) {
+      navigate("/home");
+    }
+  }, [user, loading]);
+
   return (
     <div className="landing-container">
       <div className="text-container">

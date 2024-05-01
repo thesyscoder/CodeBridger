@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./signin.style.scss";
 import { Button, Input } from "../../components/atoms";
-import { Google } from "@icon-park/react";
 import { Link, useNavigate } from "react-router-dom";
 import useSignInWithEmailAndPassword from "../../hooks/signInWithEmail/useSignInWithEmailAndPassword";
 import { toast } from "react-toastify";
@@ -36,7 +35,6 @@ const SignInPage = () => {
     if (email !== "" && password !== "") {
       try {
         const user = await loginWithEmailAndPassword(email, password);
-        console.log(user);
         if (user) {
           toast.success("Logged In");
           navigate("/home");
@@ -84,13 +82,6 @@ const SignInPage = () => {
             title={"Log In"}
             onClickAction={handleSubmit}
             disabled={isLoading}
-          />
-          {/* Sign in with Google button */}
-          <Button
-            disabled={isLoading}
-            title={"Sign In with Google"}
-            className="secondary"
-            icon={<Google theme="outline" size="18" />}
           />
           {/* Link to sign in page */}
           <p className="sub-heading">

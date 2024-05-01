@@ -18,7 +18,7 @@ const SignUpPage = () => {
     password: "",
     confirmPassword: "",
   });
-  const { signUpWithEmailAndPassword, error, isLoading } =
+  const { signUpWithEmailAndPassword, isLoading } =
     useSignUpWithEmailAndPassword();
 
   /**
@@ -36,29 +36,34 @@ const SignUpPage = () => {
   /**
    * Handle form submission
    */
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // Handle form submission here
     const { fullName, email, password, confirmPassword } = inputValues;
-    if (
-      fullName !== "" &&
-      email !== "" &&
-      password !== "" &&
-      confirmPassword !== "" &&
-      password === confirmPassword
-    ) {
-      const user = signUpWithEmailAndPassword(email, password);
-      toast.success(`User is created.`);
-    } else {
-      toast.error("All fields are required or check password");
-      toast.error(error);
+
+    if (!fullName || !email || !password || !confirmPassword) {
+      toast.warning("All fields are required!");
+      return;
+    }
+    if (password !== confirmPassword) {
+      toast.warning("Passwords do not match!");
+      return;
     }
 
-    setInputValues({
-      fullName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-    });
+    try {
+      // call the SignUpWithEmailAndPassword function
+      const user = await signUpWithEmailAndPassword(email, password);
+      if (user) {
+        toast.success("User created successfully!");
+        setInputValues({
+          fullName: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
+        });
+      }
+    } catch (error) {
+      toast.error(error.message); // Display error message from Firebase
+    }
   };
 
   return (

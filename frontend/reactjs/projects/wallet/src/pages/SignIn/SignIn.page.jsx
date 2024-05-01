@@ -30,14 +30,20 @@ const SignInPage = () => {
   /**
    * Handle form submission
    */
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // Handle form submission here
     const { email, password } = inputValues;
     if (email !== "" && password !== "") {
-      const user = loginWithEmailAndPassword(email, password);
-      toast.success("Logged In");
-      console.log(user);
-      navigate("/home");
+      try {
+        const user = await loginWithEmailAndPassword(email, password);
+        console.log(user);
+        if (user) {
+          toast.success("Logged In");
+          navigate("/home");
+        }
+      } catch (error) {
+        toast.error(error.message); // Display error message from Firebase
+      }
     } else {
       toast.error("Required email and password");
       toast.error(error);

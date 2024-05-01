@@ -20,7 +20,9 @@ const useSignInWithEmailAndPassword = () => {
       return userCredential.user;
     } catch (error) {
       setIsLoading(false);
-      setError(error);
+      const errorMessage = error.message || "An error occurred";
+      setError(errorMessage);
+      throw new Error(errorMessage); // Throw error to handle in the component
     }
   };
 

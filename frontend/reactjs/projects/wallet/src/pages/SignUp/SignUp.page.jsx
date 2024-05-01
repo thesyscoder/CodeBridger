@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./signup.style.scss";
 import { Button, Input } from "../../components/atoms";
-import { Google } from "@icon-park/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import useSignUpWithEmailAndPassword from "../../hooks/signUpWithEmail/useSignUpWithEmailAndPassword";
 
@@ -20,6 +19,7 @@ const SignUpPage = () => {
   });
   const { signUpWithEmailAndPassword, isLoading } =
     useSignUpWithEmailAndPassword();
+  const navigate = useNavigate();
 
   /**
    * Handle input change event
@@ -51,9 +51,10 @@ const SignUpPage = () => {
 
     try {
       // call the SignUpWithEmailAndPassword function
-      const user = await signUpWithEmailAndPassword(email, password);
+      const user = await signUpWithEmailAndPassword(email, password, fullName);
       if (user) {
         toast.success("User created successfully!");
+        navigate("/home");
         setInputValues({
           fullName: "",
           email: "",
@@ -109,13 +110,6 @@ const SignUpPage = () => {
           <Button
             title={isLoading ? "Loading" : "Create an account"}
             onClickAction={handleSubmit}
-          />
-          {/* Sign up with Google button */}
-          <Button
-            disabled={isLoading}
-            title={isLoading ? "Loading" : "Sign Up with Google"}
-            className="secondary"
-            icon={<Google theme="outline" size="18" />}
           />
           {/* Link to sign in page */}
           <p className="sub-heading">

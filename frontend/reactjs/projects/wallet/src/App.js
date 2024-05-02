@@ -40,7 +40,7 @@ const App = () => {
         },
         {
           element: <SignUpPage />,
-          path: "/",
+          path: "/signup",
         },
       ],
     },

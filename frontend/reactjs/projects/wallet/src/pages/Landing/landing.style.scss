@@ -1,0 +1,40 @@
+// style landing page
+@import "../../styles/colors";
+@import "../../styles/typography";
+@import "../../styles/mixin";
+
+.landing-page-main-container {
+  display: flex;
+  //   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  .text-content-container,
+  .banner-illustration-container {
+    flex: 1;
+    padding: 6rem;
+  }
+  .text-content-container {
+    & h2 {
+      font-size: $H2_SIZE;
+      color: $PRIMARY_COLOR;
+      margin-bottom: 1rem;
+    }
+    & h1 {
+      font-size: $H1_SIZE * 1.8;
+      margin-bottom: 1rem;
+      color: $WHITE_COLOR;
+    }
+    p {
+      color: $GRAY_COLOR;
+      margin-bottom: 1rem;
+    }
+  }
+  .banner-illustration-container {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

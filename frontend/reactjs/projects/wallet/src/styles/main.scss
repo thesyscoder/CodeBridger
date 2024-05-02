@@ -1,5 +1,6 @@
-@use "reset";
-@use "global";
-@use "colors";
-@use "typography";
-@use "mixins";
+// import all scss
+@import "./colors";
+@import "./reset";
+@import "./typography";
+@import "./global";
+@import "./mixin";

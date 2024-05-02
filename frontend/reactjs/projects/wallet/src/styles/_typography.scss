@@ -1,41 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import "./colors";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
-// Define variables for typography
+// font family and font style
+$BASE_FONT_FAMILY: "Quicksand", sans-serif;
+$BASE_FONT_STYLE: normal;
+
+// Define variables for base font size and font scale
 $BASE_FONT_SIZE: 16px;
-$BASE_LINE_HEIGHT: 1.5;
-$BASE_FONT_FAMILY: "Montserrat", sans-serif;
+$FONT_SCALE: 1.5;
 
-// Define mixins for typography styles
+// Function to calculate font sizes based on the scale
 
-@mixin heading {
-  font-family: $BASE_FONT_FAMILY;
-  font-weight: bold;
-  line-height: $BASE_LINE_HEIGHT;
+@function cal_font_size($size) {
+  @return $BASE_FONT_SIZE * $FONT_SCALE * $size;
 }
 
-@mixin body-text {
-  font-family: $BASE_FONT_FAMILY;
-  line-height: $BASE_LINE_HEIGHT;
-}
+// Define heading sizes
+$H1_SIZE: cal_font_size(1.5);
+$H2_SIZE: cal_font_size(1.25);
+$H3_SIZE: cal_font_size(1.1);
 
-// Define typography styles
-h1 {
-  @include heading();
-  font-size: $BASE_FONT_SIZE * 2;
-}
-
-h2 {
-  @include heading();
-  font-size: $BASE_FONT_SIZE * 1.5;
-}
-
-h3 {
-  @include heading();
-  font-size: $BASE_FONT_SIZE * 1.25;
-}
-
-p {
-  @include body-text();
-  font-size: $BASE_FONT_SIZE;
-}
+// body font size
+$BODY_FONT_SIZE: $BASE_FONT_SIZE;

@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+// font family and font style
+$BASE_FONT_FAMILY: "Quicksand", sans-serif;
+$BASE_FONT_STYLE: normal;
+
+// Define variables for base font size and font scale
+$BASE_FONT_SIZE: 16px;
+$FONT_SCALE: 1.5;
+
+// Function to calculate font sizes based on the scale
+
+@function cal_font_size($size) {
+  @return $BASE_FONT_SIZE * $FONT_SCALE * $size;
+}
+
+// Define heading sizes
+$H1_SIZE: cal_font_size(1.5);
+$H2_SIZE: cal_font_size(1.25);
+$H3_SIZE: cal_font_size(1.1);
+
+// body font size
+$BODY_FONT_SIZE: $BASE_FONT_SIZE;

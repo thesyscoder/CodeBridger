@@ -1,0 +1,30 @@
+// global style
+
+body {
+  font-family: $BASE_FONT_FAMILY;
+  font-style: $BASE_FONT_STYLE;
+  background-color: $WHITE_COLOR;
+  color: $BLACK_COLOR;
+  font-size: $BODY_FONT_SIZE;
+}
+
+h1 {
+  font-size: $H1_SIZE;
+}
+h2 {
+  font-size: $H2_SIZE;
+}
+h1 {
+  font-size: $H3_SIZE;
+}
+p {
+  font-size: $BODY_FONT_SIZE;
+}
+
+// media queries for responsive font size
+@media screen and (max-width: 768px) {
+  // Adjust font sizes for smaller screens if necessary
+  h1 {
+    font-size: $H1_SIZE * 0.8; // Example: Reduce H1 size by 20% for smaller screens
+  }
+}

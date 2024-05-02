@@ -1,14 +1,51 @@
 import React from "react";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import {
+  ErrorPage,
+  HomePage,
+  LandingPage,
+  SignInPage,
+  SignUpPage,
+} from "./pages";
+
+const AppLayout = () => {
+  return (
+    <>
+      <div className="app-container">
+        <ToastContainer />
+        <Outlet />
+      </div>
+    </>
+  );
+};
 
 const App = () => {
-  return (
-    <div>
-      <h1>This is h1</h1>
-      <h2>This is h2</h2>
-      <h3>This is h3</h3>
-      <p>This is p</p>
-    </div>
-  );
+  const appRouter = createBrowserRouter([
+    {
+      element: <AppLayout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          element: <LandingPage />,
+          path: "/",
+        },
+        {
+          element: <HomePage />,
+          path: "/home",
+        },
+        {
+          element: <SignInPage />,
+          path: "/signin",
+        },
+        {
+          element: <SignUpPage />,
+          path: "/",
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={appRouter}></RouterProvider>;
 };
 
 export default App;

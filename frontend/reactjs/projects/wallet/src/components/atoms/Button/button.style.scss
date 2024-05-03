@@ -1,0 +1,31 @@
+// style button
+@import "../../../styles/colors";
+@import "../../../styles/mixin";
+
+button {
+  outline: none;
+  border: 1.4px solid $GRAY_COLOR;
+  padding: 0.8rem;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+  font-weight: bold;
+  @include box-shadow;
+}
+
+// Icon styles
+.icon {
+  margin-right: 8px; // Adjust this value as needed
+}
+.primary {
+  background-color: $PRIMARY_COLOR;
+  color: $WHITE_COLOR;
+  &:hover {
+    background-color: $WHITE_COLOR;
+    color: $BLACK_COLOR;
+  }
+}
+.secondary {
+  background-color: $WHITE_COLOR;
+}

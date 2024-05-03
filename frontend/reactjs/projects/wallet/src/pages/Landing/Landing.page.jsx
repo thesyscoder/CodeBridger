@@ -19,23 +19,21 @@ const LandingPage = () => {
         <p>
           Track every expense effortlessly, budget with ease, and achieve your
           financial goals confidently. Join thousands who've found financial
-          freedom with Wallet."
+          freedom with Wallet.
         </p>
         <div className="button-container">
           <Button
+            title={"Sign Up"}
             className="primary"
-            title="Sign Up"
-            disabled={false}
+            isDisabled={false}
             onClickAction={() => handleNavigation("/signup")}
           />
-          <Button />
           <Button
+            title={"Sign In"}
             className="secondary"
-            title="Sign In"
-            disabled={false}
+            isDisabled={false}
             onClickAction={() => handleNavigation("/signin")}
           />
-          <Button />
         </div>
       </div>
       <div className="banner-illustration-container">

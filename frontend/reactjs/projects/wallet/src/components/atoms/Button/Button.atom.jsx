@@ -1,18 +1,20 @@
 import React from "react";
 import "./button.style.scss";
-
 const Button = ({
+  icon,
   title,
   className = "primary",
+  isDisabled = false,
   onClickAction,
-  disabled = false,
 }) => {
   return (
     <button
-      className={`btn ${className}`}
+      type="button"
+      disabled={isDisabled}
+      className={className}
       onClick={onClickAction}
-      disabled={disabled}
     >
+      {icon && <span className="icon">{icon}</span>}
       {title}
     </button>
   );

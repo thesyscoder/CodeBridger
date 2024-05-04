@@ -3,9 +3,9 @@
 body {
   font-family: $BASE_FONT_FAMILY;
   font-style: $BASE_FONT_STYLE;
-  background-color: $WHITE_COLOR;
   color: $BLACK_COLOR;
   font-size: $BODY_FONT_SIZE;
+  letter-spacing: 0.6px;
 }
 
 h1 {
@@ -22,7 +22,7 @@ p {
 }
 a {
   text-decoration: none;
-  color: inherit;
+  color: $PRIMARY_COLOR;
   font-weight: 500;
   cursor: pointer;
 }

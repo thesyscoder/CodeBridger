@@ -1,6 +1,5 @@
 import React from "react";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import {
   ErrorPage,
   HomePage,
@@ -8,13 +7,27 @@ import {
   SignInPage,
   SignUpPage,
 } from "./pages";
+import { Toaster } from "react-hot-toast";
 
 const AppLayout = () => {
   return (
     <>
       <div className="app-container">
-        <ToastContainer />
         <Outlet />
+        <Toaster
+          toastOptions={{
+            success: {
+              style: {
+                color: "green",
+              },
+            },
+            error: {
+              style: {
+                color: "red",
+              },
+            },
+          }}
+        ></Toaster>
       </div>
     </>
   );

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./signup.style.scss";
 import { Button, Input } from "../../components/atoms";
-import { Google, Mail } from "grommet-icons";
+import { Google } from "grommet-icons";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 const SignUpPage = () => {
   const [inputValues, setInputValues] = useState({
     fullName: "",
@@ -20,8 +21,33 @@ const SignUpPage = () => {
   };
 
   // handle submit for signInWithEmail button
-  const handleSignWithEmail = () => {
-    console.log(inputValues);
+  const handleSignWithEmail = (event) => {
+    const { fullName, email, password, confirmPassword } = inputValues;
+    if (!fullName || !email || !password || !confirmPassword) {
+      toast.error("All fields are required!");
+      return;
+    }
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      toast.error("Invalid email address.");
+    }
+    if (password.length < 8) {
+      toast.error("Password should be at least 8 character long.");
+      return;
+    }
+    if (password !== confirmPassword) {
+      toast.error("Ensure that the password and confirm password fields match");
+      return;
+    }
+    // success action
+    toast.success("Account created.");
+    setInputValues({
+      fullName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
   };
 
   return (
@@ -43,7 +69,7 @@ const SignUpPage = () => {
             placeholder={"Full name"}
             name="fullName"
             onChangeAction={handleInputChange}
-            inputValue={inputValues.name}
+            inputValue={inputValues.fullName}
           />
           <Input
             type="email"
@@ -67,14 +93,13 @@ const SignUpPage = () => {
             inputValue={inputValues.confirmPassword}
           />
           <Button
-            icon={<Mail color="white"></Mail>}
             title={"Sign Up with email"}
             className="primary"
             onClickAction={handleSignWithEmail}
           />
 
           <Button
-            icon={<Google color="plain"></Google>}
+            icon={<Google color="plain" size="18px"></Google>}
             title={"Sign Up with Google "}
             className="secondary"
             onClickAction={() => {}}

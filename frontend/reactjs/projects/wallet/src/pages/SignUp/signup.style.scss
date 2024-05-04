@@ -1,0 +1,23 @@
+@import "../../styles/colors";
+@import "../../styles/mixin";
+
+.signup-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  & .text-container {
+    padding: 4rem;
+    @include box-shadow;
+    max-width: 35%;
+    border-radius: 6px;
+
+    > * {
+      margin-bottom: 1rem;
+      > * {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

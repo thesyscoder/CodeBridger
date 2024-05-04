@@ -1,0 +1,12 @@
+@import "../../../styles/colors";
+
+.input {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  background-color: $GRAY_COLOR;
+  border-radius: 6px;
+  &:focus {
+    outline: none;
+  }
+}

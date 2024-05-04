@@ -3,6 +3,9 @@
 @import "../../../styles/mixin";
 
 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
   border: 1.4px solid $GRAY_COLOR;
   padding: 0.8rem;
@@ -14,10 +17,10 @@ button {
   @include box-shadow;
 }
 
-// Icon styles
 .icon {
-  margin-right: 8px; // Adjust this value as needed
+  margin-right: 8px; /* Adjust this value as needed */
 }
+
 .primary {
   background-color: $PRIMARY_COLOR;
   color: $WHITE_COLOR;

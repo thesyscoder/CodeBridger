@@ -4,8 +4,10 @@ import { Button, Input } from "../../components/atoms";
 import { Google } from "grommet-icons";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import useNavigation from "../../hooks/useNavigate/useNavigate";
 
 const SignInPage = () => {
+  const navigateTo = useNavigation();
   const [inputValues, setInputValues] = useState({
     email: "",
     password: "",
@@ -33,6 +35,7 @@ const SignInPage = () => {
     }
     // success action
     toast.success("Logged in successfully.");
+    navigateTo("/home");
     setInputValues({
       email: "",
       password: "",

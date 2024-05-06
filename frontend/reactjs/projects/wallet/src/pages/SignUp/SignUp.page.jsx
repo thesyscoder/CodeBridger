@@ -1,24 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./signup.style.scss";
 import { Button, Input } from "../../components/atoms";
 import { Google } from "grommet-icons";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import { useInput, useNavigation } from "../../hooks";
 const SignUpPage = () => {
-  const [inputValues, setInputValues] = useState({
+  const { inputValues, onChange, reset } = useInput({
     fullName: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
-  // handle input change
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setInputValues({
-      ...inputValues,
-      [name]: value,
-    });
-  };
+  const navigateTo = useNavigation();
 
   // handle submit for signInWithEmail button
   const handleSignWithEmail = (event) => {
@@ -41,13 +35,11 @@ const SignUpPage = () => {
       return;
     }
     // success action
+    console.log(inputValues);
     toast.success("Account created.");
-    setInputValues({
-      fullName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-    });
+
+    reset();
+    navigateTo("/home");
   };
 
   return (
@@ -68,28 +60,28 @@ const SignUpPage = () => {
             type="text"
             placeholder={"Full name"}
             name="fullName"
-            onChangeAction={handleInputChange}
+            onChangeAction={onChange}
             inputValue={inputValues.fullName}
           />
           <Input
             type="email"
             placeholder={"Email"}
             name="email"
-            onChangeAction={handleInputChange}
+            onChangeAction={onChange}
             inputValue={inputValues.email}
           />
           <Input
             type="password"
             placeholder={"Password"}
             name="password"
-            onChangeAction={handleInputChange}
+            onChangeAction={onChange}
             inputValue={inputValues.password}
           />
           <Input
             type="password"
             placeholder={"Confirm password"}
             name="confirmPassword"
-            onChangeAction={handleInputChange}
+            onChangeAction={onChange}
             inputValue={inputValues.confirmPassword}
           />
           <Button

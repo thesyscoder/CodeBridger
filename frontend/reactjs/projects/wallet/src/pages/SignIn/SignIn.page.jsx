@@ -1,25 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./signin.style.scss";
 import { Button, Input } from "../../components/atoms";
 import { Google } from "grommet-icons";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import useNavigation from "../../hooks/useNavigate/useNavigate";
+import { useInput } from "../../hooks";
 
 const SignInPage = () => {
   const navigateTo = useNavigation();
-  const [inputValues, setInputValues] = useState({
+  const { inputValues, onChange, reset } = useInput({
     email: "",
     password: "",
   });
-  // handle input change
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setInputValues({
-      ...inputValues,
-      [name]: value,
-    });
-  };
 
   // handle submit for signInWithEmail button
   const handleLoginWithEmail = (event) => {
@@ -34,12 +27,10 @@ const SignInPage = () => {
       toast.error("Invalid email address.");
     }
     // success action
+    console.log(inputValues);
     toast.success("Logged in successfully.");
     navigateTo("/home");
-    setInputValues({
-      email: "",
-      password: "",
-    });
+    reset();
   };
 
   return (
@@ -60,14 +51,14 @@ const SignInPage = () => {
             type="email"
             placeholder={"Email"}
             name="email"
-            onChangeAction={handleInputChange}
+            onChangeAction={onChange}
             inputValue={inputValues.email}
           />
           <Input
             type="password"
             placeholder={"Password"}
             name="password"
-            onChangeAction={handleInputChange}
+            onChangeAction={onChange}
             inputValue={inputValues.password}
           />
 

@@ -26,6 +26,12 @@ a {
   font-weight: 500;
   cursor: pointer;
 }
+ul {
+  list-style: none;
+  & li {
+    cursor: pointer;
+  }
+}
 // media queries for responsive font size
 @media screen and (max-width: 768px) {
   // Adjust font sizes for smaller screens if necessary

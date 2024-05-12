@@ -1,0 +1,15 @@
+// design sidebar
+@import "../../../styles/colors";
+
+.sidebar-container {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  border-right: 1px solid #ccc;
+  transition: left 0.3s ease;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

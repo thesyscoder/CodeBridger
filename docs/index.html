@@ -1,196 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CodeBridger</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        /* Reset styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Global styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: #fafafa;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header styles */
-        header {
-            background-color: #405de6;
-            color: #fff;
-            padding: 20px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        header .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        header .logo i {
-            font-size: 2em;
-            margin-right: 10px;
-        }
-
-        header h1 {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li:first-child {
-            margin-left: 0;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-
-        /* Main styles */
-        main {
-            padding: 20px 0;
-        }
-
-        .section-title {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            color: #333;
-            text-align: center;
-        }
-
-        .cards-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .card {
-            width: calc(33.33% - 20px);
-            background-color: #f5f5f5;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            padding: 20px;
-            transition: transform 0.3s ease;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .card p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #666;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <i class="fas fa-code"></i>
-            <h1>CodeBridger</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contribute">Contribute</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#basics">Basics</a></li>
+          <li><a href="#dsa">Data Structures and Algorithms</a></li>
+          <li><a href="#frontend">Frontend Development</a></li>
+          <li><a href="#backend">Backend Development</a></li>
+          <li><a href="#databases">Databases</a></li>
+          <li><a href="#cloud">Cloud Computing</a></li>
+          <li><a href="#testing">Testing</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <main>
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">About CodeBridger</h2>
-                <p>CodeBridger is a comprehensive resource hub for various aspects of software development...</p>
-            </div>
-        </section>
+      <section>
+        <h1>CodeBridger</h1>
+        <p>
+          Welcome to CodeBridger! This is a comprehensive resource hub for
+          various aspects of software development...
+        </p>
+      </section>
 
-        <section>
-            <div class="container">
-                <h2 class="section-title">Topics</h2>
-                <div class="cards-container">
-                    <div class="card" style="background-color: #ffe6cc;">
-                        <h3>Basics of Programming</h3>
-                        <p>Get started with programming fundamentals and learn the basics of popular languages.</p>
-                    </div>
-                    <div class="card" style="background-color: #ccffcc;">
-                        <h3>Data Structures and Algorithms</h3>
-                        <p>Explore data structures, algorithms, and problem-solving techniques.</p>
-                    </div>
-                    <div class="card" style="background-color: #ccf2ff;">
-                        <h3>Frontend Development</h3>
-                        <p>Learn modern frontend technologies like HTML, CSS, and JavaScript frameworks.</p>
-                    </div>
-                    <div class="card" style="background-color: #ffd9b3;">
-                        <h3>Backend Development</h3>
-                        <p>Discover backend technologies including server-side languages, frameworks, and databases.</p>
-                    </div>
-                    <div class="card" style="background-color: #e6ccff;">
-                        <h3>Databases</h3>
-                        <p>Explore different types of databases and learn how to use them effectively in your applications.</p>
-                    </div>
-                    <div class="card" style="background-color: #ffcccc;">
-                        <h3>Cloud Computing</h3>
-                        <p>Understand cloud computing concepts and popular cloud platforms for deploying applications.</p>
-                    </div>
-                    <div class="card" style="background-color: #ccf5ff;">
-                        <h3>Testing</h3>
-                        <p>Learn software testing methodologies and best practices for ensuring the quality of your code.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="basics">
+        <h2>Basics</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Python</h3>
+            <p>
+              Resources for learning Python programming language, including
+              tutorials, online courses, and books.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <h3>JavaScript</h3>
+            <p>
+              Resources for learning JavaScript programming language, including
+              tutorials, documentation, and interactive coding platforms.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </section>
 
-        <section id="contribute">
-            <div class="container">
-                <h2 class="section-title">Contribute</h2>
-                <p>Contributions are welcome! Please read the <a href="CONTRIBUTING.md">Contribution Guidelines</a> before contributing to this project.</p>
-            </div>
-        </section>
+      <section id="dsa">
+        <h2>Data Structures and Algorithms (DSA)</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Learning Resources</h3>
+            <p>
+              Resources for learning data structures and algorithms, including
+              textbooks, online courses, and coding challenges platforms.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <h3>Projects</h3>
+            <p>
+              Projects involving the implementation and application of data
+              structures and algorithms, such as sorting algorithms, graph
+              algorithms, and dynamic programming problems.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="frontend">
+        <h2>Frontend Development</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>ReactJS</h3>
+            <p>
+              Resources for learning ReactJS framework, including official
+              documentation, tutorials, and advanced topics.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="backend">
+        <h2>Backend Development</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>FastAPI</h3>
+            <p>
+              Resources for learning FastAPI framework, including official
+              documentation, tutorials, and advanced features.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="databases">
+        <h2>Databases</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>PostgreSQL</h3>
+            <p>
+              Resources for learning PostgreSQL database, including SQL
+              tutorials, database design principles, and advanced features.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <h3>MongoDB</h3>
+            <p>
+              Resources for learning MongoDB, including NoSQL database concepts,
+              document-oriented data modeling, and CRUD operations.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <h3>Firebase</h3>
+            <p>
+              Resources for learning Firebase, including Firebase SDK
+              documentation, tutorials, and best practices.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="cloud">
+        <h2>Cloud Computing</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Learning Resources</h3>
+            <p>
+              Resources for learning cloud computing fundamentals, including
+              cloud service models, deployment strategies, and cost
+              optimization.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <h3>Projects</h3>
+            <p>
+              Cloud computing projects for deploying web applications,
+              serverless functions, and scalable infrastructure on cloud
+              platforms.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="testing">
+        <h2>Testing</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Learning Resources</h3>
+            <p>
+              Resources for learning software testing principles, including test
+              types, testing strategies, and test automation tools.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <h3>Projects</h3>
+            <p>
+              Testing projects for implementing test suites, writing test cases,
+              and performing automated testing on web applications, APIs, and
+              mobile apps.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 CodeBridger. All rights reserved.</p>
-        </div>
+      <p>&copy; CodeBridger</p>
     </footer>
 
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

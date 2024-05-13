@@ -1,15 +1,62 @@
-// design sidebar
+// sidebar.style.scss
 @import "../../../styles/colors";
+@import "../../../styles/mixin";
 
-.sidebar-container {
-  width: 250px;
-  height: 100%;
-  position: fixed;
+.sidebar {
+  width: 16%;
+  @include box-shadow;
+  height: 100vh;
+  padding: 1rem;
+  left: 0;
   top: 0;
-  border-right: 1px solid #ccc;
-  transition: left 0.3s ease;
-  margin-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  position: sticky;
+
+  &.close {
+    transform: translateX(-80%);
+  }
+
+  .text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .brand {
+      margin-left: 1rem;
+      display: flex;
+      h1 {
+        color: $PRIMARY_COLOR;
+        font-weight: 500;
+        font-size: x-large;
+      }
+    }
+  }
+  .menu-container-without-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .menu-container-with-icon {
+    .menulist {
+      margin-top: 2rem;
+      .menu {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+
+        .icon {
+          margin-left: 1rem;
+        }
+        &:hover {
+          background-color: $PRIMARY_COLOR;
+          padding: 1rem 0;
+          border-radius: 6px;
+          color: $WHITE_COLOR;
+          transition: 1s ease-in-out;
+        }
+      }
+    }
+  }
 }
